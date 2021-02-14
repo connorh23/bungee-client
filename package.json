@@ -1,0 +1,22 @@
+{
+  "name": "bungee-client",
+  "version": "1.0.0",
+  "description": "Bungee Client",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/connorh23/bungee-client.git"
+  },
+  "author": "connor.hood234@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/connorh23/bungee-client/issues"
+  },
+  "homepage": "https://github.com/connorh23/bungee-client#readme",
+  "dependencies": {
+    "bungee-lib": "^1.0.2"
+  }
+}
