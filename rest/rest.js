@@ -1,12 +1,6 @@
+const { environment } = require('bungee-lib');
 
-const {
-    environment
-} = require('bungee-lib');
-
-const { 
-    requests,
-    responses
- } = require('bungee-lib/http');
+const { requests, responses } = require('bungee-lib/http');
 
 const create = async ({ model, item }) => {
     const url = `${environment.vars.API_DOMAIN}/rest/${model}/create`;
@@ -34,7 +28,7 @@ const destroy = async ({ model, id }) => {
 };
 
 const __parse_response = response => {
-    return (({ 
+    return (({
         status,
         statusText,
         headers,
