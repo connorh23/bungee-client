@@ -1,10 +1,9 @@
 {
   "name": "bungee-client",
-  "version": "1.0.0",
-  "description": "Bungee Client",
-  "main": "index.js",
+  "version": "1.1.2",
+  "description": "Bungee Client ~ 1.1.2 adds more modular exporting of classes",
   "scripts": {
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "repository": {
     "type": "git",
