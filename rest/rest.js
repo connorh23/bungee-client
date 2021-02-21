@@ -1,6 +1,5 @@
-const { environment } = require('bungee-lib');
-
-const { requests, responses } = require('bungee-lib/http');
+const { environment, http } = require('bungee-lib');
+const { requests } = http;
 
 const create = async ({ model, item }) => {
     const url = `${environment.vars.API_DOMAIN}/rest/${model}/create`;
