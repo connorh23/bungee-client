@@ -1,11 +1,16 @@
-const { rest } = require('./rest');
+const rest = require('./rest');
 
-class ModelClient {
-
+class Client {
    MODEL_NAME;
-
    constructor({ model_name }) {
       this.MODEL_NAME = model_name;
+   }
+}
+
+class ModelClient extends Client {
+
+   constructor({ model_name }) {
+      super({ model_name});
    }
 
    create = async item => {
@@ -29,6 +34,4 @@ class ModelClient {
    };
 }
 
-module.exports = {
-   ModelClient
-};
+module.exports = ModelClient;
