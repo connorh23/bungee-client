@@ -8,7 +8,7 @@ npm install bungee-lib
 ``` 
 ---
 ### Usage Example
-Together with ```bungee-lib/environment``` you can make requests to your bungee cluster in the following manners
+Together with ```bungee-lib/environment``` you can make requests to your bungee cluster in the following manner
 ```javascript
 const { rest } = require('./rest');
 const { environment } = require('bungee-lib');
