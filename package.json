@@ -1,6 +1,6 @@
 {
   "name": "bungee-client",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Bungee Client ~ 1.2.0 introduces ModelClient",
   "scripts": {
     "test": "jest --passWithNoTests"
