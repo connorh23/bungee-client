@@ -1,7 +1,7 @@
 {
   "name": "bungee-client",
   "version": "1.1.2",
-  "description": "Bungee Client ~ 1.1.2 adds more modular exporting of classes",
+  "description": "Bungee Client ~ 1.2.0 introduces ModelClient",
   "scripts": {
     "test": "jest --passWithNoTests"
   },
