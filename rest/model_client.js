@@ -1,7 +1,6 @@
 const rest = require('./rest');
 
 class Client {
-   MODEL_NAME;
    constructor({ model_name }) {
       this.MODEL_NAME = model_name;
    }
