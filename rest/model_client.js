@@ -8,6 +8,18 @@ class ModelClient {
       this.MODEL_NAME = model_name;
    }
 
+   query = async ({ query_params, page, page_size, order_by, order_direction }) => {
+      let response = await rest.query({
+         model: this.MODEL_NAME,
+         query_params,
+         page,
+         page_size,
+         order_by,
+         order_direction
+      });
+      return response.data;
+   };
+
    create = async item => {
       let response = await rest.create({ model: this.MODEL_NAME, item });
       return response.data;

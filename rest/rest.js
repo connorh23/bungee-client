@@ -1,6 +1,21 @@
 const { environment, http } = require('bungee-lib');
 const { requests } = http;
 
+const query = async ({ model, query_params, page, page_size, order_by, order_direction }) => {
+    const url = `${environment.vars.API_DOMAIN}/rest/${model}/query/`;
+    const response = await requests.get({
+        url,
+        query_params: {
+            ... query_params,
+            page,
+            page_size,
+            order_by,
+            order_direction
+        }
+    });
+    return __parse_response(response);
+};
+
 const create = async ({ model, item }) => {
     const url = `${environment.vars.API_DOMAIN}/rest/${model}/create`;
     const response =  await requests.post({ url, request_body: item });
@@ -37,6 +52,7 @@ const __parse_response = response => {
 };
 
 module.exports = {
+    query,
     create,
     retrieve,
     update,
