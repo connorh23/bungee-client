@@ -1,7 +1,7 @@
 {
   "name": "bungee-client",
-  "version": "1.2.0",
-  "description": "Bungee Client ~ 1.2.0 introduces ModelClient",
+  "version": "1.2.1",
+  "description": "Bungee Client ~ 1.2.1 adds babel class properties support",
   "scripts": {
     "test": "jest --passWithNoTests"
   },
