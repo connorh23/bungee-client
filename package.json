@@ -1,7 +1,7 @@
 {
   "name": "bungee-client",
-  "version": "1.2.2",
-  "description": "Bungee Client ~ 1.2.2 removes class properties from ModelClient",
+  "version": "1.2.3",
+  "description": "Bungee Client ~ 1.2.3 removes class properties from ModelClient",
   "scripts": {
     "test": "jest --passWithNoTests"
   },
