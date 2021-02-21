@@ -14,8 +14,8 @@ const { rest } = require('./rest');
 const { environment } = require('bungee-lib');
 
 const test = async () => {
-
-    console.log("Creating user...");
+   
+    // Create new items
     const create_response = await rest.create({
         model: environment.vars.USERS,
         item: {
@@ -23,50 +23,29 @@ const test = async () => {
             email: "test"
         }
     });
-
     const new_user = create_response.data;
 
-    console.log(new_user);
-    console.log('...done');
-
-    console.log("Verifying create...");
+    // Fetch item by id
     const retrieve_user_response = await rest.retrieve({
         model: environment.vars.USERS,
         id: new_user.id
     });
-
     const retrieved_user = retrieve_user_response.data;
-
-    console.log(retrieved_user);
-    console.log("...done");
-
+    
+    // Update an item
     new_user.name = 'updated name';
-
-    console.log("Updating user...");
     const update_response = await rest.update({
         model: environment.vars.USERS,
         item: new_user
     });
-    console.log(update_response.data);
-    console.log("...done");
 
-    console.log("Verifying update...");
-    const verify_update_response = await rest.retrieve({
-        model: environment.vars.USERS,
-        id: new_user.id
-    });
-    console.log(verify_update_response.data);
-    console.log("...done");
-
-
-    console.log("Destroying...");
+    // Destroy an item
     const destroy_response = await rest.destroy({
         model: environment.vars.USERS,
         id: new_user.id
     });
-    console.log(destroy_response.data === 1);
-    console.log('...done');
-
+    const destroy_success = destroy_response.data === 1;
+   
 };
 
 test();
