@@ -17,7 +17,7 @@ const update = async ({ model, item }) => {
     const url = `${environment.vars.API_DOMAIN}/rest/${model}/update`;
     const response =  await requests.put({ url, request_body: item });
     const raw_update_response = __parse_response(response);
-    return { ... raw_update_response, data: raw_update_response.data[1] }
+    return { ... raw_update_response, data: raw_update_response.data[1][0] }
 };
 
 const destroy = async ({ model, id }) => {
