@@ -3,6 +3,8 @@
   "version": "1.4.1",
   "description": "Bungee Client ~ 1.3.1 use updated async_executor",
   "scripts": {
+    "build": "npm install",
+    "build:clean": "rm -r node_modules; rm package-lock.json; npm instll",
     "test": "jest --passWithNoTests",
     "lint": "./node_modules/.bin/eslint .",
     "lint:fix": "./node_modules/.bin/eslint . --fix"
