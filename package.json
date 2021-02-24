@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/connorh23/bungee-client#readme",
   "dependencies": {
-    "bungee-lib": "^1.2.0",
+    "bungee-lib": "2.0.1",
     "dotenv": "^8.2.0"
   },
   "devDependencies": {
